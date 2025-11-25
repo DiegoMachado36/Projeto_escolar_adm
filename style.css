@@ -561,7 +561,7 @@ header nav ul li a:hover::after {
 }
 
 .team-card:nth-child(2) .photo {
-  background-image: url("src/isabele.jpg");
+  background-image: url("src/giovana.png");
   background-size: cover;
   /* garante que a foto preencha o círculo */
   background-position: center;
@@ -571,7 +571,7 @@ header nav ul li a:hover::after {
 }
 
 .team-card:nth-child(3) .photo {
-  background-image: url("src/giovana.png");
+  background-image: url("src/isabele.jpg");
   background-size: cover;
   /* garante que a foto preencha o círculo */
   background-position: center;
