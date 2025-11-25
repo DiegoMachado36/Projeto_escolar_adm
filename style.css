@@ -367,7 +367,7 @@ header nav ul li a:hover::after {
   margin-top: 60px;
   display: flex;
   justify-content: center;
-  gap: 600px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -521,7 +521,7 @@ header nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 5px;
 }
 
 .team-card {
