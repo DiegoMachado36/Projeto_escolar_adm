@@ -238,7 +238,7 @@ header nav ul li a:hover::after {
 .cards-identidade {
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -295,7 +295,7 @@ header nav ul li a:hover::after {
 
 .cards {
   display: flex;
-  gap: 150px;
+  gap: 60px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -367,7 +367,7 @@ header nav ul li a:hover::after {
   margin-top: 60px;
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 600px;
   flex-wrap: wrap;
 }
 
