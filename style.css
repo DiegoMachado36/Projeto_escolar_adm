@@ -521,12 +521,12 @@ header nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 
 .team-card {
   background: #eaf2ff;
-  width: 240px;
+  width: 150px;
   padding: 60px 15px 25px;
   /* espaço para a foto */
   border-radius: 16px;
