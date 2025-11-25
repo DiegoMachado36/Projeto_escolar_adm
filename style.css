@@ -918,20 +918,25 @@ nav ul {
   }
 
 
-  /* PRISMA IDENTIDADE - RESPONSIVO */
-  .prisma_indentidade {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  
+
+  /* FORÇA O CONTAINER A FICAR EM COLUNA */
+  .prisma_indentidade_conteiner,
+  .prisma_indentidade-wrapper,
+  .prisma_identidade_container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
   }
 
+  /* IMAGEM RESPONSIVA */
   .prisma_indentidade img {
-    width: 90%;        /* imagem ocupa 90% da largura */
-    max-width: 350px;  /* limite para não ficar gigante */
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    margin-top: 20px;
   }
+
+
 
 
   /* MOSTRAR HAMBÚRGUER */
