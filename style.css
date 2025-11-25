@@ -917,6 +917,23 @@ nav ul {
     height: auto;
   }
 
+
+  /* PRISMA IDENTIDADE - RESPONSIVO */
+  .prisma_indentidade {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .prisma_indentidade img {
+    width: 90%;        /* imagem ocupa 90% da largura */
+    max-width: 350px;  /* limite para não ficar gigante */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+
   /* MOSTRAR HAMBÚRGUER */
   .hamburger {
     display: flex;
