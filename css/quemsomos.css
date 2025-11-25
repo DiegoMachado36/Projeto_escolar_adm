@@ -1,0 +1,161 @@
+/* Estilo específico para a página "Quem Somos" */
+
+:root {
+  --color-primary: #fc6b0a;
+  --color-secundary: #fff;
+  --color-text: #000;
+  --color-textsecundario: #008cff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Estilização do header */
+
+.hero {
+  background: var(--color-textsecundario);
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.bloco {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.bloco:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #008cff;
+}
+
+ul {
+  margin: 15px 0 0 20px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+.valores li {
+  margin-bottom: 10px;
+}
+
+/* EStilização Rodapé */
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--color-textsecundario);
+  color: var(--color-secundary);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.linhadivisoria {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secundary);
+  margin-bottom: 10px;
+}
+
+.text-footer p {
+  padding: 10px 20px;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  header .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .container-quemsomos {
+    padding: 30px 15px;
+  }
+
+  .text-quemsomos h2 {
+    font-size: 26px;
+  }
+
+  .text-quemsomos p,
+  .container-quemsomos ul {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 14px;
+  }
+}
+
+/* Smartphones (até 480px) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .container-quemsomos {
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+
+  .text-quemsomos h2 {
+    font-size: 22px;
+  }
+
+  .text-quemsomos p,
+  .container-quemsomos ul {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 13px;
+  }
+
+  .text-footer p {
+    font-size: 0.8em;
+  }
+}

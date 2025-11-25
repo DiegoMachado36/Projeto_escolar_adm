@@ -1,0 +1,103 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+
+.hero {
+    background: #008cff;
+    padding: 0px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_texto {
+    padding: 40px 20px;
+    text-align: center;
+    color: #000;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== CONTAINER ===== */
+.container-termos {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.bloco {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.bloco:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.bloco h2 {
+    font-size: 26px;
+    color: #008cff;
+    margin-bottom: 12px;
+}
+
+.bloco p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    width: 100%;
+    background: #008cff;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+}
+
+.linhadivisoria {
+    display: none;
+    /* remove linha branca */
+}
+
+.text-footer p {
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container-termos {
+        padding: 15px;
+    }
+
+    .bloco {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,1062 @@
+:root {
+  --color-secundary: #fff;
+  --color-text: #000;
+  --color-textsecundario: #008cff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilização do header */
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--color-textsecundario);
+  flex-wrap: wrap;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+header .logo img {
+  width: 200px;
+  height: 100px;
+}
+
+header .logo img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: var(--color-secundary);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px;
+}
+
+header nav ul li a::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  background-color: var(--color-text);
+  transition: 0.7s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* Estilização conteudo principal */
+
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: linear-gradient(to bottom, rgba(5, 9, 211, 0.1), #06121e), url("src/coneccta_main.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.hero .content-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  color: var(--color-secundary);
+}
+
+.hero .text-hero {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.hero span {
+  display: block;
+}
+
+.hero .sub-texto {
+  font-size: 30px;
+}
+
+.hero .content-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.hero .btn-servico {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid var(--color-text);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.hero .btn-servico:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: var(--color-textsecundario);
+  z-index: -1;
+}
+
+.hero .btn-servico:hover,
+.hero .btn-servico:focus {
+  color: var(--color-secundary);
+}
+
+.hero .btn-servico:hover:before,
+.hero .btn-servico:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.hero .btn-servico:active {
+  transform: scale(0.9);
+}
+
+
+
+/* Estilização área de quem somos*/
+
+.container-quemsomos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+  background: var(--color-secundary);
+
+}
+
+.container-quemsomos .text-quemsomos {
+  max-width: 900px;
+}
+
+.container-quemsomos h2 {
+  font-size: 35px;
+  color: var(--color-text);
+}
+
+.container-quemsomos p {
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.container-quemsomos .btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  border: 3px solid var(--color-text);
+  cursor: pointer;
+  position: relative;
+  background-color: var(--color-secundary);
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+
+.container-quemsomos .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-textsecundario);
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+}
+
+.container-quemsomos .btn:hover::before {
+  transform: translateX(0);
+}
+
+/* Indentidade Visual */
+
+.identidade {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f8fbff;
+}
+
+.identidade h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #06121e;
+  font-weight: bold;
+}
+
+.cards-identidade {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  background: #fff;
+  width: 350px;
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #06121e;
+}
+
+.card-item p {
+  color: #415066;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Stylo Nossos Cursos */
+
+.cursos {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cursos h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+}
+
+.cursos h1 span {
+  color: #1e80ff;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #555;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  width: 350px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  background: #eef5ff;
+  padding: 18px;
+  border-radius: 16px;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.icon img {
+  width: 40px;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  color: #000;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Nossos Alunos */
+
+.alunos-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.alunos-section .title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #000;
+}
+
+.alunos-section .title span {
+  color: #2c74ff;
+}
+
+.alunos-section .subtitle {
+  margin-top: 5px;
+  color: #666;
+  font-size: 18px;
+}
+
+.alunos-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+.aluno-card {
+  width: 360px;
+  background: #f0f6ff;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.aluno-card:hover {
+  transform: translateY(-5px);
+}
+
+.aluno-foto {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.aluno-info {
+  margin-top: 10px;
+}
+
+.aluno-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.aluno-info .cargo {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.depoimento {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.stars {
+  color: #f7c948;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+/*Estilização Contato */
+
+.contato {
+  background-image: url('src/contato.png');
+  /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  /* A imagem vai cobrir toda a área da seção */
+  background-position: center;
+  /* A imagem será centralizada */
+  padding: 40px 0;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.contato .container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fefefe;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.btncontato {
+  width: 100%;
+  padding: 14px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btncontato:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização da Equipe */
+
+.team-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.team-section h2 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.team-card {
+  background: #eaf2ff;
+  width: 240px;
+  padding: 60px 15px 25px;
+  /* espaço para a foto */
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+
+/* Círculo da foto */
+.team-card .photo {
+  width: 105px;
+  height: 105px;
+  background: #d9e8ff;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.team-card:nth-child(1) .photo {
+  background-image: url("src/andressa_60x60.png");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+.team-card:nth-child(2) .photo {
+  background-image: url("src/isabele.jpg");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+.team-card:nth-child(3) .photo {
+  background-image: url("src/giovana.png");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+.team-card:nth-child(4) .photo {
+  background-image: url("src/layra.png");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+.team-card:nth-child(5) .photo {
+  background-image: url("src/sara.png");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+.team-card:nth-child(6) .photo {
+  background-image: url("src/thairini_60x60.png");
+  background-size: cover;
+  /* garante que a foto preencha o círculo */
+  background-position: center;
+  /* centraliza a imagem */
+  background-repeat: no-repeat;
+
+}
+
+
+.team-card h3 {
+  font-size: 17px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+
+
+/* EStilização Rodapé */
+
+footer .container-footer {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--color-textsecundario);
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+}
+
+.box-footer .logo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.box-footer .logo>img {
+  width: 200px;
+  height: 100px;
+}
+
+.box-footer .logo>img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-footer .contatos p i {
+  font-size: 40px;
+  color: var(--color-secundary);
+  margin-bottom: 20px;
+}
+
+.box-footer .contatos a {
+  color: var(--color-secundary);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.box-footer .redes-sociais a button {
+  padding: 18px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  margin: 20px 10px;
+  background-color: var(--color-secundary);
+  font-size: 22px;
+  cursor: pointer;
+  transition: .5s;
+  color: var(--color-text);
+}
+
+.box-footer .redes-sociais i {
+  display: flex;
+  align-items: center;
+}
+
+.box-footer .redes-sociais button:hover {
+  background-color: #666;
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+footer .box-footer {
+  width: 320px;
+  min-height: 150px;
+  padding: 20px;
+}
+
+.box-footer h3 {
+  color: var(--color-secundary);
+  margin-bottom: 20px;
+  position: relative;
+  padding: 7px;
+}
+
+.box-footer h3::after {
+  content: " ";
+  width: 30%;
+  height: 4px;
+  background-color: var(--color-secundary);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 5s ease-in-out;
+}
+
+
+.box-footer ul li {
+  margin: 10px 0px;
+  list-style: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.box-footer ul li a {
+  color: var(--color-secundary);
+  text-decoration: none;
+  transition: 1s;
+}
+
+.box-footer ul li a:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.box-footer .content-footer {
+  padding-left: 0;
+  margin: 0;
+}
+
+.box-footer .content-footer li {
+  list-style: none;
+  color: var(--color-secundary);
+  margin: 10px 0;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0;
+  display: block;
+  font-size: 20px;
+}
+
+.box-footer .card-footer {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.box-footer .card-footer li>i {
+  color: var(--color-secundary);
+  font-size: 40px;
+}
+
+.linhadivisoria {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secundary);
+}
+
+.text-footer p {
+  background: #008cff;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-secundary);
+}
+
+/* Efeito Scrol Reveal */
+
+.content-hero,
+.text-quemsomos,
+.container,
+.avaliacao-box {
+  visibility: hidden;
+}
+
+/*====== MENU MOBILE CORRIGIDO ======*/
+.menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100; /* garante que o botão fique clicável */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  nav {
+    position: absolute;
+    top: 70px; /* abaixo do header */
+    left: 0;
+    width: 100%;
+    z-index: 100; /* MENU por cima de tudo */
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-height: 80vh; /* altura do menu */
+    overflow-y: auto; /* scroll funcionando */
+    background: var(--color-textsecundario);
+    padding: 20px 0;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}
+
+
+
+
+/* =============================== */
+/* RESPONSIVIDADE E MENU MOBILE   */
+/* =============================== */
+
+/* BOTÃO HAMBÚRGUER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 35px;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  border-radius: 5px;
+  background: #fff;
+  transition: .3s;
+}
+
+/* MENU MOBILE FECHADO */
+nav {
+  transition: .5s;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+/* ========================= */
+/* ===== TELAS MENORES ===== */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+  .hero .text-hero {
+    font-size: 45px;
+  }
+
+  .hero .sub-texto {
+    font-size: 22px;
+  }
+
+  .cards,
+  .cards-identidade,
+  .alunos-container {
+    gap: 60px;
+  }
+}
+
+
+/* ========================= */
+/* ===== TELAS MOBILE ===== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  header .logo img {
+    width: 140px;
+    height: auto;
+  }
+
+  /* MOSTRAR HAMBÚRGUER */
+  .hamburger {
+    display: flex;
+  }
+
+  /* ESCONDER MENU NORMAL */
+  nav {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: var(--color-textsecundario);
+    transform: translateY(-300px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+  }
+
+  /* MENU ABERTO */
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  /* ÍCONES DO HAMBÚRGUER ANIMADOS */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+
+  /* HERO */
+  .hero {
+    height: 450px;
+    background-position: center;
+  }
+
+  .hero .text-hero {
+    font-size: 32px;
+  }
+
+  .hero .sub-texto {
+    font-size: 18px;
+  }
+
+  .content-btn {
+    flex-direction: column;
+  }
+
+
+  /* QUEM SOMOS */
+  .container-quemsomos {
+    padding: 60px 20px;
+  }
+
+  .container-quemsomos h2 {
+    font-size: 28px;
+  }
+
+  .container-quemsomos p {
+    font-size: 18px;
+  }
+
+
+  /* CARDS GERAIS */
+  .cards,
+  .cards-identidade,
+  .alunos-container,
+  .team-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .card,
+  .card-item,
+  .aluno-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+
+  /* CONTATO */
+  .contato .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+
+  /* EQUIPE */
+  .team-card {
+    width: 90%;
+    max-width: 280px;
+  }
+
+
+  /* FOOTER */
+  footer .container-footer {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  footer .box-footer {
+    width: 100%;
+  }
+
+  .linhadivisoria {
+    height: 1px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .hero .text-hero {
+    font-size: 26px;
+  }
+
+  .hero .sub-texto {
+    font-size: 16px;
+  }
+
+  .cards,
+  .cards-identidade {
+    gap: 20px;
+  }
+
+  .card,
+  .card-item {
+    padding: 25px 20px;
+  }
+}
